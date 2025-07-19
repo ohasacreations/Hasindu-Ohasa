@@ -21,7 +21,7 @@ const Projects = () => {
     {
       title: 'Christmas Microworld',
       category: 'Digital Art',
-      image: '/images/christmas-microworld.jpg',
+      image: '/images/project-2.jpg',
       description: 'Christmas Microworld is a creative digital artwork that captures the magic of the holiday season in miniature form. This manipulation portrays a tiny Christmas scene using advanced Photoshop techniques.',
       tags: ['Photoshop', 'Manipulation', 'Christmas', 'Miniature']
     },
