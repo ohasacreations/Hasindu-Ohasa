@@ -15,10 +15,10 @@ const About = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+          <div className="space-y-6 animate-slide-in-left">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500 group">
               <div className="flex items-start space-x-4 mb-4">
-                <div className="bg-purple-500/20 rounded-lg p-3">
+                <div className="bg-purple-500/20 rounded-lg p-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <Heart className="w-6 h-6 text-purple-400" />
                 </div>
                 <div>
@@ -32,9 +32,9 @@ const About = () => {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500 group animate-slide-in-left delay-200">
               <div className="flex items-start space-x-4 mb-4">
-                <div className="bg-indigo-500/20 rounded-lg p-3">
+                <div className="bg-indigo-500/20 rounded-lg p-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <Building className="w-6 h-6 text-indigo-400" />
                 </div>
                 <div>
@@ -49,9 +49,9 @@ const About = () => {
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500 group animate-slide-in-right">
             <div className="flex items-start space-x-4 mb-6">
-              <div className="bg-violet-500/20 rounded-lg p-3">
+              <div className="bg-violet-500/20 rounded-lg p-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                 <Code2 className="w-6 h-6 text-violet-400" />
               </div>
               <div>
@@ -74,7 +74,7 @@ const About = () => {
               {['Web Development', 'Software Engineering', 'Digital Design', 'Content Creation'].map((skill) => (
                 <span 
                   key={skill}
-                  className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-400/30 rounded-full px-4 py-2 text-white/90 text-sm"
+                  className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-400/30 rounded-full px-4 py-2 text-white/90 text-sm hover:scale-110 hover:bg-gradient-to-r hover:from-purple-500/30 hover:to-indigo-500/30 transition-all duration-300 cursor-default"
                 >
                   {skill}
                 </span>
