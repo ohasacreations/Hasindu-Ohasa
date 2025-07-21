@@ -67,15 +67,15 @@ const Education = () => {
             
             <div className="space-y-8">
               {education.map((item, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative animate-slide-in-right" style={{ animationDelay: `${index * 200}ms` }}>
                   {/* Timeline Dot */}
-                  <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full border-4 border-black hidden md:block" />
+                  <div className="absolute left-6 w-4 h-4 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full border-4 border-black hidden md:block animate-pulse" />
                   
                   <div className="md:ml-16">
-                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 group">
+                    <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 hover:-translate-y-1 transition-all duration-500 group">
                       <div className="flex flex-wrap items-start justify-between mb-4">
                         <div className="flex items-center space-x-3 mb-2">
-                          <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-3">
+                          <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                             <GraduationCap className="w-6 h-6 text-purple-400" />
                           </div>
                           <div>
