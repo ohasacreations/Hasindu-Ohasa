@@ -15,12 +15,12 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         {/* Profile Image Placeholder */}
-        <div className="mb-8">
-          <div className="w-48 h-48 mx-auto bg-white/10 backdrop-blur-lg border border-white/20 rounded-full flex items-center justify-center">
+        <div className="mb-8 animate-fade-in-up">
+          <div className="w-48 h-48 mx-auto bg-white/10 backdrop-blur-lg border border-white/20 rounded-full flex items-center justify-center hover:scale-105 transition-transform duration-500 group">
             <img 
               src="/images/profile.jpg" 
               alt="Hasindu Ohasa" 
-              className="w-full h-full rounded-full object-cover"
+              className="w-full h-full rounded-full object-cover group-hover:scale-110 transition-transform duration-500"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
@@ -32,33 +32,33 @@ const Hero = () => {
         </div>
 
         {/* Main Content */}
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up delay-200">
           Hasindu <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Ohasa</span>
         </h1>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+        <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up delay-400">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 animate-slide-in-left">
             <Code className="w-5 h-5 text-purple-400" />
             <span className="text-white/90">Developer</span>
           </div>
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 animate-slide-in-up delay-200">
             <Palette className="w-5 h-5 text-indigo-400" />
             <span className="text-white/90">Designer</span>
           </div>
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 flex items-center space-x-2 hover:bg-white/20 hover:scale-105 transition-all duration-300 animate-slide-in-right">
             <Camera className="w-5 h-5 text-violet-400" />
             <span className="text-white/90">Creator</span>
           </div>
         </div>
 
-        <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+        <p className="text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed animate-fade-in-up delay-600">
           Passionate creative and tech enthusiast specializing in photography, videography, graphic design, 
           and software development. Founder of <span className="text-purple-400 font-semibold">Droplens Studios Co.</span>
         </p>
 
         <button 
           onClick={scrollToAbout}
-          className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-8 py-4 text-white hover:bg-white/20 transition-all duration-300 flex items-center space-x-2 mx-auto"
+          className="group bg-white/10 backdrop-blur-lg border border-white/20 rounded-full px-8 py-4 text-white hover:bg-white/20 hover:scale-105 transition-all duration-300 flex items-center space-x-2 mx-auto animate-fade-in-up delay-800 hover:shadow-lg hover:shadow-purple-500/25"
         >
           <span>Explore My Work</span>
           <ArrowDown className="w-5 h-5 group-hover:translate-y-1 transition-transform duration-300" />
