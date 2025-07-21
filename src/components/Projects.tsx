@@ -68,16 +68,17 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.title}
-              className={`bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 transition-all duration-300 group ${
+              className={`bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl overflow-hidden hover:bg-white/15 hover:scale-105 hover:-translate-y-2 transition-all duration-500 group animate-fade-in-up ${
                 project.featured ? 'md:col-span-2 lg:col-span-2' : ''
               }`}
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-48 overflow-hidden group-hover:h-52 transition-all duration-500">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-700"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg?auto=compress&cs=tinysrgb&w=800`;
@@ -104,9 +105,9 @@ const Projects = () => {
 
                 {/* Play Button for Videos */}
                 {project.category === 'Videography' && (
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-full p-4 group-hover:scale-110 transition-transform duration-300">
-                      <Play className="w-8 h-8 text-white" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-lg border border-white/30 rounded-full p-4 group-hover:scale-110 transition-transform duration-300 animate-pulse">
+                      <Play className="w-8 h-8 text-white animate-bounce" />
                     </div>
                   </div>
                 )}
@@ -145,9 +146,9 @@ const Projects = () => {
                 )}
 
                 {/* Action Button */}
-                <button className="w-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-400/30 rounded-lg px-4 py-2 text-white/90 hover:bg-gradient-to-r hover:from-purple-500/30 hover:to-indigo-500/30 transition-all duration-300 flex items-center justify-center space-x-2">
+                <button className="w-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-400/30 rounded-lg px-4 py-2 text-white/90 hover:bg-gradient-to-r hover:from-purple-500/30 hover:to-indigo-500/30 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center space-x-2 group">
                   <span>View Project</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                 </button>
               </div>
             </div>
