@@ -242,7 +242,7 @@ const Contact = () => {
         <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
             <p className="text-white/80">
-              © 2024 Hasindu Ohasa. All rights reserved. | Designed with creativity and built with passion.
+              © 2025 Hasindu Ohasa. All rights reserved. | Designed with creativity and built with passion.
             </p>
             <p className="text-white/60 mt-2 text-sm">
               Founder of <span className="text-purple-400">Droplens Studios Co.</span>
