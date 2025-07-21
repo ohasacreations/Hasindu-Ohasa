@@ -106,8 +106,8 @@ const Contact = () => {
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+          <div className="space-y-8 animate-slide-in-left">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500">
               <h3 className="text-2xl font-semibold text-white mb-6 flex items-center space-x-3">
                 <MessageCircle className="w-6 h-6 text-purple-400" />
                 <span>Contact Information</span>
@@ -120,9 +120,9 @@ const Contact = () => {
                     <a
                       key={index}
                       href={item.href}
-                      className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/10 transition-colors duration-300 group"
+                      className="flex items-start space-x-4 p-4 rounded-lg hover:bg-white/10 hover:scale-105 transition-all duration-300 group"
                     >
-                      <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                         <IconComponent className="w-5 h-5 text-purple-400" />
                       </div>
                       <div>
@@ -136,10 +136,10 @@ const Contact = () => {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500">
               <h3 className="text-xl font-semibold text-white mb-6">Follow Me</h3>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 animate-fade-in-up">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;
                   return (
@@ -148,9 +148,9 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 hover:bg-white/20 transition-all duration-300 ${social.color} group`}
+                      className={`bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg p-4 hover:bg-white/20 hover:scale-110 hover:-translate-y-1 transition-all duration-300 ${social.color} group`}
                     >
-                      <IconComponent className="w-6 h-6 text-white/80 group-hover:scale-110 transition-transform duration-300" />
+                      <IconComponent className="w-6 h-6 text-white/80 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
                     </a>
                   );
                 })}
@@ -170,7 +170,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
+          <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8 hover:bg-white/15 hover:scale-105 transition-all duration-500 animate-slide-in-right">
             <h3 className="text-2xl font-semibold text-white mb-6">Send a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -183,7 +183,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:scale-105 transition-all duration-300"
                     placeholder="Your name"
                   />
                 </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:scale-105 transition-all duration-300"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -209,7 +209,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:scale-105 transition-all duration-300"
                   placeholder="Project inquiry, collaboration, etc."
                 />
               </div>
@@ -222,17 +222,17 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent focus:scale-105 transition-all duration-300 resize-none"
                   placeholder="Tell me about your project or idea..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group"
+                className="w-full bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 group"
               >
                 <span>Send Message</span>
-                <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
               </button>
             </form>
           </div>
@@ -242,7 +242,7 @@ const Contact = () => {
         <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8">
             <p className="text-white/80">
-              © 2025 Hasindu Ohasa. All rights reserved. | Designed with creativity and built with passion.
+              © 2024 Hasindu Ohasa. All rights reserved. | Designed with creativity and built with passion.
             </p>
             <p className="text-white/60 mt-2 text-sm">
               Founder of <span className="text-purple-400">Droplens Studios Co.</span>
